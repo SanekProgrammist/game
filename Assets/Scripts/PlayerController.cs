@@ -10,11 +10,15 @@ public class PlayerController : MonoBehaviour
 
     private bool isGround;
     private Rigidbody2D rigidbody2D;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     
@@ -32,7 +36,23 @@ public class PlayerController : MonoBehaviour
             Jump();
         }
 
-        
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            animator.SetInteger("State", 1);
+        }
+        else
+        {
+            animator.SetInteger("State", 0);
+        }
+
     }
     private void Jump()
     {
