@@ -10,22 +10,58 @@ public class Patroler : MonoBehaviour
     public Transform point;
     bool moveingRight;
 
+    Transform player;
+    public float stoppingDistance;
+
+    bool chill = false;
+    bool angry = false;
+    bool goBack = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player ").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position,point.position) < positionOfPatrol)
+        if (Vector2.Distance(transform.position,point.position) < positionOfPatrol && angry == false)
         {
-            Chill();
+            chill = true;
+        }
+
+        if (Vector2.Distance(transform.position,point.position) < stoppingDistance)
+        {
+            angry = true;
+            chill = false;
+            goBack = false;
+        }
+
+        if (Vector2.Distance(transform.position,point.position) > stoppingDistance)
+        {
+            goBack = true;
+            angry = false;
         }
 
 
+
+
+        if (chill == true)
+        {
+            Chill();
+        }
+        else if (angry == true)
+        {
+            Angry();
+
+        }
+        else if (goBack == true)
+        {
+            GoBack();
+
+        }
 
     }
 
@@ -33,11 +69,11 @@ public class Patroler : MonoBehaviour
     {
         if (transform.position.x > point.position.x + positionOfPatrol)
         {
-            moveingRight = true;
+            moveingRight = false;
         }
         else if (transform.position.x < point.position.x - positionOfPatrol)
         {
-            moveingRight = false;
+            moveingRight = true;
         }
 
         if (moveingRight)
@@ -48,8 +84,8 @@ public class Patroler : MonoBehaviour
         else
         {
 
-
-
+           transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
+           
         }
 
 
@@ -58,13 +94,12 @@ public class Patroler : MonoBehaviour
 
     void Angry()
     {
-
-
+        transform.position = Vector2.MoveTowards(transform.position,player.position, speed * Time.deltaTime);
     }
 
     void GoBack()
     {
-
+        transform.position = Vector2.MoveTowards(transform.position,point.position, speed * Time.deltaTime);
 
     }
 
