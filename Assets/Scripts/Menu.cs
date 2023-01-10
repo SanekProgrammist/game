@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Buttom : MonoBehaviour
+public class Menu : MonoBehaviour
 {
-    public void onClick()
+    public void Play(int index)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
+
