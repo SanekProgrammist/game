@@ -9,6 +9,7 @@ TagManager:
   - out_of_level
   - Next_level
   - Previous_level
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Enemies
+  - attack
   - 
   - 
   - 
