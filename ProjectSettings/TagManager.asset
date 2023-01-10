@@ -10,6 +10,11 @@ TagManager:
   - Next_level
   - Previous_level
   - ground
+<<<<<<< HEAD
+=======
+  - Enemy
+  - player
+>>>>>>> 4fa6824d03423e409a23f9f6118a6e438dfacc57
   layers:
   - Default
   - TransparentFX
