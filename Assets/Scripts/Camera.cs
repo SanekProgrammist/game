@@ -9,6 +9,7 @@ public class Camera : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(following.position.x,
-                                         transform.position.y, transform.position.z);
+                                         following.position.y,
+                                         transform.position.z);
     }
 }

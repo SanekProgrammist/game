@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 1240572330}
   - component: {fileID: 1240572329}
   - component: {fileID: 1240572328}
-  - component: {fileID: 1240572327}
+  - component: {fileID: 1240572331}
   m_Layer: 5
   m_Name: Fade
   m_TagString: Untagged
@@ -244,23 +244,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.196106, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 917, y: 412}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1240572327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4995207237118988316, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
-  m_PrefabInstance: {fileID: 1335646872}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240572325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e728b59e2cc3ea64d81d055080ffb7ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: Menu
-  disableFadeInAnimation: 1
 --- !u!95 &1240572328
 Animator:
   serializedVersion: 5
@@ -269,7 +255,7 @@ Animator:
   m_PrefabInstance: {fileID: 1335646872}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240572325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d9c4cefee8d24c148abab8cc93a25f31, type: 2}
   m_CullingMode: 0
@@ -288,7 +274,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1335646872}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240572325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -319,6 +305,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240572325}
   m_CullTransparentMesh: 1
+--- !u!114 &1240572331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240572325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ab903b7ef9b534183c2ce39a0778c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 1.5
+  nextLevel: 0
 --- !u!1001 &1335646872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -333,6 +333,10 @@ PrefabInstance:
     - target: {fileID: 4995207237118988316, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
       propertyPath: disableFadeInAnimation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654249669243168232, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8654249669243168234, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
       propertyPath: m_Pivot.x
@@ -423,6 +427,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1197983155}
     - target: {fileID: 8654249669243168235, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654249669243168235, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
       propertyPath: m_PlaneDistance
       value: 100
       objectReference: {fileID: 0}
@@ -430,7 +438,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransition
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8654249669847821826, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654249669847821827, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 917
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654249669847821827, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 412
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654249669847821827, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654249669847821827, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654249669847821853, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a1daa185d4913004ea29fc87dee4cd38, type: 3}
 --- !u!1 &1344639090
 GameObject:
