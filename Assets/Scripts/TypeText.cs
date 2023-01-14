@@ -6,7 +6,7 @@ public class TypeText : MonoBehaviour
 {
     public Text text1;
 
-    public string text = "Заброшенный лес находится позади проклятой горы. Если ты хочешь отправится туда, то возьми с собой на помощь эту волшебную подушечку, как только захочешь поспать, просто поклади её рядом и поспи.";
+    public string text = "";
 
     void Start()
     {
