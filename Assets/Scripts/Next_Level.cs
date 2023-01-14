@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Next_Level : MonoBehaviour
 {
-    public int location;
+    public int location2;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(location);
+            SceneManager.LoadScene(location2);
         }
 
     }
