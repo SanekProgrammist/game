@@ -11619,6 +11619,10 @@ PrefabInstance:
       propertyPath: location
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8226646521493889619, guid: 662208056cb94464e9678e78e26cb7f8, type: 3}
+      propertyPath: location2
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8226646521493889628, guid: 662208056cb94464e9678e78e26cb7f8, type: 3}
       propertyPath: m_Name
       value: Next_level

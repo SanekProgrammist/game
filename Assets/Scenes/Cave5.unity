@@ -18911,7 +18911,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a945b1afb75364891c0a62d887f457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location2: 8
 --- !u!95 &1004612728
 Animator:
   serializedVersion: 5
@@ -34622,7 +34621,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
